@@ -1,0 +1,26 @@
+{
+  "anime": {
+      "title": "Bleach",
+      "genre": "Action, Adventure, Supernatural",
+      "rating": "PG",
+      "releaseYear": "2004",
+      "author": "Tite Kubo",
+      "famousCharacter": "Kurosaki Ichigo"
+  },
+  "anime2": {
+      "title": "Demon Slayer",
+      "genre": "Action, Adventure, Dark fantasy",
+      "rating": "PG-13",
+      "releaseYear": "2019",
+      "author": "Koyoharu Gotouge",
+      "famousCharacter": "Tanjiro Kamado, Nezuko Kamado"
+  },
+  "anime3": {
+      "title": "Attack on Titan",
+      "genre": "Action, Dark fantasy, Post-apocalyptic",
+      "rating": "PG-13",
+      "releaseYear": "2013",
+      "author": "Hajime Isayama",
+      "famousCharacter": "Eren Yeager, Mikasa Ackerman, Armin Arlert, Levy Ackerman"
+  }
+}
