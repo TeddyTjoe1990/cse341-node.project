@@ -1,7 +1,7 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
-const getAllAnime = async (req, res, next) => {
+const getAllAnimes = async (req, res, next) => {
   try {
     const result = await mongodb.getDb().db('my_project').collection('animes').find();
     result.toArray().then((animes) => {
@@ -110,7 +110,7 @@ const deleteAnime = async (req, res, next) => {
 };
 
 module.exports = {
-  getAllAnime,
+  getAllAnimes,
   getAnimeById,
   createAnime,
   updateAnime,
