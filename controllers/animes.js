@@ -1,7 +1,7 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
-const getAllAnimes = async (req, res, next) => {
+const getAllAnimes = async (req, res) => {
   try {
     const result = await mongodb.getDb().db('my_project').collection('animes').find();
     result.toArray().then((animes) => {
@@ -13,7 +13,7 @@ const getAllAnimes = async (req, res, next) => {
   }
 };
 
-const getAnimeById = async (req, res, next) => {
+const getAnimeById = async (req, res) => {
   try {
     const entryId = new ObjectId(req.params.id);
     const result = await mongodb
@@ -52,7 +52,7 @@ const createAnime = async (req, res) => {
   }
 };
 
-const updateAnime = async (req, res, next) => {
+const updateAnime = async (req, res) => {
   try {
     if (!ObjectId.isValid(req.params.id)) {
       res.status(400).json('Must use a valid id to update the data!');
@@ -85,7 +85,7 @@ const updateAnime = async (req, res, next) => {
   }
 };
 
-const deleteAnime = async (req, res, next) => {
+const deleteAnime = async (req, res) => {
   try {
     if (!ObjectId.isValid(req.params.id)) {
       res.status(400).json('Must use a valid id to delete the data!');

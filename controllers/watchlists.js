@@ -1,7 +1,7 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
-const getAllWatchlists = async (req, res, next) => {
+const getAllWatchlists = async (req, res) => {
   try {
     const result = await mongodb.getDb().db('my_project').collection('watchlists').find();
     result.toArray().then((watchlists) => {
@@ -13,7 +13,7 @@ const getAllWatchlists = async (req, res, next) => {
   }
 };
 
-const getWatchlistById = async (req, res, next) => {
+const getWatchlistById = async (req, res) => {
   try {
     const watchlistId = new ObjectId(req.params.id);
     const result = await mongodb.getDb().db('').collection('').find({ _id: watchlistId });
@@ -26,7 +26,7 @@ const getWatchlistById = async (req, res, next) => {
   }
 };
 
-const createWatchlist = async (req, res, next) => {
+const createWatchlist = async (req, res) => {
   try {
     const watchlists = {
       title: req.body.title,
@@ -54,7 +54,7 @@ const createWatchlist = async (req, res, next) => {
   }
 };
 
-const updateWatchlist = async (req, res, next) => {
+const updateWatchlist = async (req, res) => {
   try {
     if (!ObjectId.isValid(req.params.id)) {
       res.status(400).json('Must use a valid watchlist id to update a watchlist.');
@@ -86,7 +86,7 @@ const updateWatchlist = async (req, res, next) => {
   }
 };
 
-const deleteWatchlist = async (req, res, next) => {
+const deleteWatchlist = async (req, res) => {
   try {
     if (!ObjectId.isValid(req.params.id)) {
       res.status(400).json('Must use a valid watchlist id to delete a watchlist.');
