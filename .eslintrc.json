@@ -11,5 +11,14 @@
     "sourceType": "module"
   },
   "plugins": ["prettier"],
-  "rules": {}
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-console": "off",
+    "prettier/prettier": "error",
+    "func-names": "off",
+    "object-shorthand": "off",
+    "class-methods-use-this": "off",
+    "spaced-comment": "error",
+    "node/no-unpublished-require": "off"
+  }
 }
