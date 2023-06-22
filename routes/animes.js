@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 const animeController = require('../controllers/anime');
 
-router.get('/', animeController.getAll);
+router.get('/', animeController.getAllAnime);
 
-router.get('/:id', animeController.getSingle);
+router.get('/:id', animeController.getAnimeById);
 
-router.post('/', animeController.createData);
+router.post('/', animeController.createAnime);
 
 module.exports = router;

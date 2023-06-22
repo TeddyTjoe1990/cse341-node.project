@@ -1,9 +1,8 @@
-const router = require('express').Router();
+const express = require('express');
+const router = express.Router();
 
 router.use('/', require('./swagger'));
-
-router.use('/', require('./'));
-
-router.use('/', require('./'));
+router.use('/anime', require('./animes'));
+router.use('/watchlist', require('./watchlists'));
 
 module.exports = router;
