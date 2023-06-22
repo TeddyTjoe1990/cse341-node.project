@@ -1,45 +1,47 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
-const getAll = async (req, res, next) => {
+const getAllAnime = async (req, res, next) => {
     try {
-        const result = await mongodb.getDb().db('').collection('').find();
-        result.toArray().then((lists) => {
+        const result = await mongodb.getDb().db('my_project').collection('animes').find();
+        result.toArray().then((anime) => {
         res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(lists);
+        res.status(200).json(anime);
     });
 } catch (err) {
     res.status(500).json(err);
 }
 };
 
-const getSingle = async (req, res, next) => {
+const getAnimeById = async (req, res, next) => {
     try {
     const entryId = new ObjectId(req.params.id);
     const result = await mongodb
         .getDb()
-        .db('')
-        .collection('')
+        .db('my_project')
+        .collection('animes')
         .find({ _id: entryId});
-    result.toArray().then((lists) => {
+    result.toArray().then((anime) => {
         res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(lists[0]);
+        res.status(200).json(anime[0]);
     });
 } catch (err) {
     res.status(500).json(err);
 }
 };
 
-const createData = async (req, res) => {
+const createAnime = async (req, res) => {
     try {
-    const movie = {
+    const anime = {
         title: req.body.title,
         genre: req.body.genre,
         rating: req.body.rating,
         releaseYear: req.body.releaseYear,
-        famousActor: req.body.famousActor
+        author: req.body.author,
+        famousCharacter: req.body.famousCharacter
     };
-    const response = await mongodb.getDb().db('').collection('').insertOne(movie);
+
+    const response = await mongodb.getDb().db('my_project').collection('animes').insertOne(anime);
     if (response.acknowledged) {
         res.status(201).json(response);
     } else {
@@ -50,51 +52,8 @@ const createData = async (req, res) => {
 }
 };
 
-const updateData = async (req, res) => {
-    try {
-    const entryId = new ObjectId(req.params.id);
-    const movie = {
-        title: req.body.title,
-        genre: req.body.genre,
-        rating: req.body.rating,
-        releaseYear: req.body.releaseYear,
-        famousActor: req.body.famousActor
-    };
-    const response = await mongodb
-        .getDb()
-        .db('')
-        .collection('')
-        .replaceOne({ _id: entryId }, movie);
-    console.log(response);
-    if (response.modifiedCount > 0) {
-        res.status(204).send();
-    } else {
-        res.status(500).json(response.error || 'Some error occurred while updating the movie entry.');
-    }
-} catch (err) {
-    res.status(500).json(err);
-}
-};
-
-const deleteData = async (req, res) => {
-    try{
-    const entryId = new ObjectId(req.params.id);
-    const response = await mongodb.getDb().db('').collection('').deleteOne({ _id: entryId }, true);
-    console.log(response);
-    if (response.deletedCount > 0) {
-        res.status(204).send();
-    } else {
-        res.status(500).json(response.error || 'Some error occurred while deleting the movie entry.');
-    }
-} catch (err) {
-    res.status(500).json(err);
-}
-};
-
 module.exports = {
-    getAll,
-    getSingle,
-    createData,
-    updateData,
-    deleteData
+    getAllAnime,
+    getAnimeById,
+    createAnime,
 };

@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Bleach",
+    "author": "Tite Kubo",
+    "famousCharacter": "Kurosaki Ichigo",
+    "episode": "1 - 88",
+    "totalSeason": "6"
+  },
+  {
+    "title": "Demon Slayer",
+    "author": "Koyoharu Gotouge",
+    "famousCharacter": "Tanjiro Kamado, Nezuko Kamado",
+    "episode": "1 - 16",
+    "totalSeason": "4"
+  },
+  {
+    "title": "Attack on Titan",
+    "author": "Hajime Isayama",
+    "famousCharacter": "Eren Yeager, Mikasa Ackerman, Armin Arlert, Levy Ackerman",
+    "episode": "1 - 34 ",
+    "totalSeason": "5"
+  }
+]
