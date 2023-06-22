@@ -1,1 +1,139 @@
+//LOCALHOST 
 GET http://localhost:10000/anime/
+
+### GET Anime by ID
+GET http://localhost:10000/anime/649397561db4eb66a2accaf3
+
+### CREATE Anime
+POST http://localhost:10000/anime/ HTTP/1.1
+Content-Type: application/json
+    
+    {
+      "title": "Naruto Shippuden",
+      "genre": "Action, Adventure",
+      "rating": "PG-13",
+      "releaseYear": "2002",
+      "author": "Masashi Kishimoto",
+      "famousCharacter": "Uzumaki Naruto, Uchiha Sasuke"
+    }
+
+### PUT Update Anime
+PUT http://localhost:10000/anime/649397561db4eb66a2accaf3 HTTP/1.1
+Content-Type: application/json
+    
+    {
+      "title": "Bleach",
+      "genre": "Action, Adventure, Supernatural",
+      "rating": "PG",
+      "releaseYear": "2004",
+      "author": "Tite Kubo",
+      "famousCharacter": "Kuchicki Byakuya"
+    }
+
+### DELETE Anime
+DELETE http://localhost:10000/anime/649397561db4eb66a2accaf3 HTTP/1.1
+
+//---------------------------------------------------------------------------
+### ALL Watchlists
+GET http://localhost:10000/watchlists/
+
+### GET Watchlist by ID
+GET http://localhost:10000/watchlists/649397561db4eb66a2accaf3
+
+### CREATE Watchlist
+POST http://localhost:10000/watchlists/ HTTP/1.1
+Content-Type: application/json
+
+    {
+      "title": "Naruto Shippuden",
+      "author": "Masashi Kishimoto",
+      "famousCharacter": "Uzumaki Naruto, Uchiha Sasuke",
+      "episode": "1 - 380",
+      "totalSeason": "1"
+    }
+
+### PUT Update Watchlist
+PUT http://localhost:10000/watchlists/649397561db4eb66a2accaf3 HTTP/1.1
+Content-Type: application/json
+
+    {
+      "title": "Bleach",
+      "author": "Tite Kubo",
+      "famousCharacter": "Kurosaki Ichigo",
+      "episode": "1 - 88",
+      "totalSeason": "6"
+    }
+
+### DELETE Watchlist
+DELETE http://localhost:3000/watchlists/649397561db4eb66a2accaf3 HTTP/1.1
+
+//--------------------------Render-----------------------------------//
+// RENDER DEPLOYMENT 
+### ALL Anime
+GET https://cse341-project-b2zk.onrender.com/anime
+
+### GET Anime by ID
+GET https://cse341-project-b2zk.onrender.com/anime/649397561db4eb66a2accaf3
+
+### CREATE Anime
+POST https://cse341-project-b2zk.onrender.com/anime/ HTTP/1.1
+Content-Type: application/json
+    
+    {
+      "title": "Naruto Shippuden",
+      "genre": "Action, Adventure",
+      "rating": "PG-13",
+      "releaseYear": "2002",
+      "author": "Masashi Kishimoto",
+      "famousCharacter": "Uzumaki Naruto, Uchiha Sasuke"
+    }
+
+### PUT Update Anime
+PUT https://cse341-project-b2zk.onrender.com/anime/6493cda51fae0895d42fb579 HTTP/1.1
+Content-Type: application/json
+    
+    {
+      "title": "Naruto Shippuden",
+      "genre": "Action, Adventure",
+      "rating": "PG-13",
+      "releaseYear": "2006",
+      "author": "Masashi Kishimoto",
+      "famousCharacter": "Uzumaki Naruto, Kurama The Nine Tails Fox"
+    }
+
+### DELETE Anime
+DELETE https://cse341-project-b2zk.onrender.com/anime/6493cda51fae0895d42fb579 HTTP/1.1
+
+
+### ALL watchlist
+GET https://cse341-project-b2zk.onrender.com/watchlist/
+
+### GET watchlist by ID
+GET https://cse341-project-b2zk.onrender.com/watchlist/6493977d1db4eb66a2accaf8
+
+### CREATE Watchlist
+POST https://cse341-project-b2zk.onrender.com/watchlist/ HTTP/1.1
+Content-Type: application/json
+
+    {
+      "title": "Naruto Shippuden",
+      "author": "Masashi Kishimoto",
+      "famousCharacter": "Uzumaki Naruto, Uchiha Sasuke",
+      "episode": "380",
+      "totalSeason": "1"
+    }
+
+### PUT Update Watchlist
+PUT https://cse341-project-b2zk.onrender.com/watchlist/6493d0e01fae0895d42fb57 HTTP/1.1
+Content-Type: application/json
+
+    {
+      "title": "Naruto Shippuden",
+      "author": "Masashi Kishimoto",
+      "famousCharacter": "Uzumaki Naruto, Hatake Kakashi",
+      "episode": "380",
+      "totalSeason": "2"
+    }
+
+### DELETE Watchlist
+DELETE https://cse341-project-b2zk.onrender.com/watchlist/6493d0e01fae0895d42fb57 HTTP/1.1
