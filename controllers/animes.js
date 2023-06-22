@@ -68,8 +68,8 @@ const updateAnime = async (req, res) => {
     };
     const response = await mongodb
       .getDb()
-      .db('planner')
-      .collection('trips')
+      .db('my_project')
+      .collection('animes')
       .replaceOne({ _id: animeId }, anime);
     console.log(response);
     if (response.modifiedCount === 1) {
