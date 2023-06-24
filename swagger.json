@@ -7,16 +7,6 @@
   },
   "host": "cse341-project-b2zk.onrender.com",
   "basePath": "/",
-  "tags": [
-    {
-      "name": "Anime",
-      "description": "Animes Control"
-    },
-    {
-      "name": "Watchlist",
-      "description": "Watchlists Control"
-    }
-  ],
   "schemes": ["https"],
   "paths": {
     "/api-docs": {
