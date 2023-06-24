@@ -35,39 +35,39 @@ DELETE http://localhost:10000/anime/649397561db4eb66a2accaf3 HTTP/1.1
 
 //---------------------------------------------------------------------------
 ### ALL Watchlists
-GET http://localhost:10000/watchlists/
+GET http://localhost:10000/watchlist/
 
 ### GET Watchlist by ID
-GET http://localhost:10000/watchlists/649397561db4eb66a2accaf3
+GET http://localhost:10000/watchlist/649397561db4eb66a2accaf3
 
 ### CREATE Watchlist
-POST http://localhost:10000/watchlists/ HTTP/1.1
+POST http://localhost:10000/watchlist/ HTTP/1.1
 Content-Type: application/json
 
     {
-      "title": "Naruto Shippuden",
-      "author": "Masashi Kishimoto",
-      "famousCharacter": "Uzumaki Naruto, Uchiha Sasuke",
-      "episode": "1 - 380",
+      "title": "Black Clover",
+      "author": "Yuki Tabata",
+      "famousCharacter": "Asta, Liebe",
+      "episode": "170",
       "totalSeason": "1"
     }
 
 ### PUT Update Watchlist
-PUT http://localhost:10000/watchlists/649397561db4eb66a2accaf3 HTTP/1.1
+PUT http://localhost:10000/watchlist/6493977d1db4eb66a2accaf8 HTTP/1.1
 Content-Type: application/json
 
     {
-      "title": "Bleach",
-      "author": "Tite Kubo",
-      "famousCharacter": "Kurosaki Ichigo",
-      "episode": "1 - 88",
+      "title": "Black Clover",
+      "author": "Yuki Tabata",
+      "famousCharacter": "Asta",
+      "episode": "90",
       "totalSeason": "6"
     }
 
 ### DELETE Watchlist
-DELETE http://localhost:3000/watchlists/649397561db4eb66a2accaf3 HTTP/1.1
+DELETE http://localhost:10000/watchlist/6493977d1db4eb66a2accaf8 HTTP/1.1
 
-//--------------------------Render-----------------------------------//
+//-----------------------------Render-----------------------------------//
 // RENDER DEPLOYMENT 
 ### ALL Anime
 GET https://cse341-project-b2zk.onrender.com/anime
