@@ -28,6 +28,7 @@
     },
     "/anime/": {
       "get": {
+        "tags": ["Animes"],
         "description": "",
         "produces": ["application/json"],
         "parameters": [],
@@ -41,6 +42,7 @@
         }
       },
       "post": {
+        "tags": ["Animes"],
         "description": "",
         "parameters": [
           {
@@ -86,6 +88,7 @@
     },
     "/anime/{id}": {
       "get": {
+        "tags": ["Animes"],
         "description": "",
         "produces": ["application/json"],
         "parameters": [
@@ -106,6 +109,7 @@
         }
       },
       "put": {
+        "tags": ["Animes"],
         "description": "",
         "produces": ["application/json"],
         "parameters": [
@@ -159,6 +163,7 @@
         }
       },
       "delete": {
+        "tags": ["Animes"],
         "description": "",
         "produces": ["application/json"],
         "parameters": [
@@ -184,6 +189,7 @@
     },
     "/watchlist/": {
       "get": {
+        "tags": ["Watchlists"],
         "description": "",
         "produces": ["application/json"],
         "parameters": [],
@@ -240,6 +246,7 @@
     },
     "/watchlist/{id}": {
       "get": {
+        "tags": ["Watchlists"],
         "description": "",
         "produces": ["application/json"],
         "parameters": [
@@ -260,6 +267,7 @@
         }
       },
       "put": {
+        "tags": ["Watchlists"],
         "description": "",
         "produces": ["application/json"],
         "parameters": [
@@ -310,6 +318,7 @@
         }
       },
       "delete": {
+        "tags": ["Watchlists"],
         "description": "",
         "produces": ["application/json"],
         "parameters": [
