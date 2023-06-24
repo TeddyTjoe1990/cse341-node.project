@@ -16,7 +16,7 @@ const getAllWatchlists = async (req, res) => {
 const getWatchlistById = async (req, res) => {
   try {
     const watchlistId = new ObjectId(req.params.id);
-    const result = await mongodb.getDb().db('').collection('').find({ _id: watchlistId });
+    const result = await mongodb.getDb().db('my_project').collection('watchlists').find({ _id: watchlistId });
     result.toArray().then((watchlists) => {
       res.setHeader('Content-Type', 'application/json');
       res.status(200).json(watchlists[0]);
