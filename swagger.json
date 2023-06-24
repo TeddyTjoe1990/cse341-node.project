@@ -193,6 +193,7 @@
         }
       },
       "post": {
+        "tags": ["Watchlists"],
         "description": "",
         "produces": ["application/json"],
         "parameters": [
