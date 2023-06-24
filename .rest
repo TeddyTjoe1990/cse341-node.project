@@ -9,25 +9,25 @@ POST http://localhost:10000/anime/ HTTP/1.1
 Content-Type: application/json
     
     {
-      "title": "Naruto Shippuden",
-      "genre": "Action, Adventure",
-      "rating": "PG-13",
-      "releaseYear": "2002",
-      "author": "Masashi Kishimoto",
-      "famousCharacter": "Uzumaki Naruto, Uchiha Sasuke"
+      "title": "Black Clover",
+      "genre": "Adventure, Fantasy",
+      "rating": "PG",
+      "releaseYear": "2015",
+      "author": "Yūki Tabata",
+      "famousCharacter": "Asta, Yuno"
     }
 
 ### PUT Update Anime
-PUT http://localhost:10000/anime/649397561db4eb66a2accaf3 HTTP/1.1
+PUT http://localhost:10000/anime/649696e36af8a9089edd0d12 HTTP/1.1
 Content-Type: application/json
     
     {
-      "title": "Bleach",
-      "genre": "Action, Adventure, Supernatural",
-      "rating": "PG",
-      "releaseYear": "2004",
-      "author": "Tite Kubo",
-      "famousCharacter": "Kuchicki Byakuya"
+      "title": "Black Clover",
+      "genre": "Adventure, Supernatural",
+      "rating": "PG-13",
+      "releaseYear": "2016",
+      "author": "Tabata Yuki",
+      "famousCharacter": "Asta, Liebe"
     }
 
 ### DELETE Anime
