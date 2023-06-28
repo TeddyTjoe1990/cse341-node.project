@@ -2,12 +2,12 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const config = {
-  authenticationRequired: false,
-  authentication0LogOut: true,
+  authRequired: false,
+  auth0Logout: true,
+  secret: process.env.SECRET,
+  baseURL: process.env.BASE_RENDER_URL,
   clientID: process.env.CLIENT_ID,
-  basicURL: process.env.BASIC_URL,
-  pubBaseURL: process.env.PUB_BASE_URL,
-  private: process.env.PRIVATE
+  issuerBaseURL: process.env.ISSUER_BASE_URL
 };
 
 module.exports = { config };
