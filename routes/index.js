@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const authenticator = require('../midware/auth');
 const {auth} = require('express-openid-connect');
 
 router.use(auth(authenticator.config));
