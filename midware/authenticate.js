@@ -1,12 +1,13 @@
-require('dotenv').config();
+const dotenv = require('dotenv');
+dotenv.config();
 
 const config = {
   authRequired: false,
   auth0Logout: true,
   secret: 'a long, randomly-generated string stored in env',
-  baseURL: 'http://cse341-project-b2zk.onrender.com',
+  baseURL: 'http://localhost:10000',
   clientID: 'c0EB0TJqRNHuoEzqO6eKqEHIWc3UOZuH',
   issuerBaseURL: 'https://dev-js03z6vvwguaxggx.us.auth0.com'
 };
 
-module.exports = {config};
+module.exports = { config };
