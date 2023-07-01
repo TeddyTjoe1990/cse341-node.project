@@ -10,4 +10,11 @@ const config = {
   issuerBaseURL: 'https://dev-js03z6vvwguaxggx.us.auth0.com'
 };
 
+const isAuthenticated = (req, res, next) => {
+  if (req.user === undefined) { 
+    return res.status(401).json({ error: 'User not authenticated' });
+  }
+  next();
+};
+
 module.exports = { config };
