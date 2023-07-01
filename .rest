@@ -31,7 +31,7 @@ Content-Type: application/json
     }
 
 ### DELETE Anime
-DELETE http://localhost:10000/anime/649397561db4eb66a2accaf3 HTTP/1.1
+DELETE http://localhost:10000/anime/649ced7a6cb2246afabb66bd HTTP/1.1
 
 //---------------------------------------------------------------------------
 ### ALL Watchlists
@@ -116,15 +116,15 @@ POST https://cse341-project-b2zk.onrender.com/watchlist/ HTTP/1.1
 Content-Type: application/json
 
     {
-      "title": "Naruto Shippuden",
-      "author": "Masashi Kishimoto",
-      "famousCharacter": "Uzumaki Naruto, Uchiha Sasuke",
-      "episode": "380",
+      "title": "Dragon Ball Z",
+      "author": "Akira Toriyama",
+      "famousCharacter": "Son Goku, Piccolo",
+      "episode": "99",
       "totalSeason": "1"
     }
 
 ### PUT Update Watchlist
-PUT https://cse341-project-b2zk.onrender.com/watchlist/6493d0e01fae0895d42fb57 HTTP/1.1
+PUT https://cse341-project-b2zk.onrender.com/watchlist/6493d0e01fae0895d42fb57a HTTP/1.1
 Content-Type: application/json
 
     {
@@ -137,3 +137,4 @@ Content-Type: application/json
 
 ### DELETE Watchlist
 DELETE https://cse341-project-b2zk.onrender.com/watchlist/6493d0e01fae0895d42fb57 HTTP/1.1
+
