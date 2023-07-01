@@ -14,8 +14,8 @@
         "description": "",
         "parameters": [],
         "responses": {
-          "200":{
-            "description":"OK"
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -71,7 +71,7 @@
             "description": "Created"
           },
           "401": {
-            "description": "User Not Authorised to perform this operation"
+            "description": "User not authenticated"
           },
           "412": {
             "description": "Precondition Failed"
@@ -154,7 +154,7 @@
             "description": "Bad Request"
           },
           "401": {
-            "description": "User Not Authorised to perform this operation"
+            "description": "User not authenticated"
           },
           "412": {
             "description": "Precondition Failed"
@@ -184,7 +184,7 @@
             "description": "Bad Request"
           },
           "401": {
-            "description": "User Not Authorised to perform this operation"
+            "description": "User not authenticated"
           },
           "500": {
             "description": "Internal Server Error"
@@ -241,7 +241,7 @@
             "description": "Created"
           },
           "401": {
-            "description": "User Not Authorised to perform this operation"
+            "description": "User not authenticated"
           },
           "412": {
             "description": "Precondition Failed"
@@ -321,7 +321,7 @@
             "description": "Bad Request"
           },
           "401": {
-            "description": "User Not Authorised to perform this operation"
+            "description": "User not authenticated"
           },
           "412": {
             "description": "Precondition Failed"
@@ -351,7 +351,7 @@
             "description": "Bad Request"
           },
           "401": {
-            "description": "User Not Authorised to perform this operation"
+            "description": "User not authenticated"
           },
           "500": {
             "description": "Internal Server Error"
