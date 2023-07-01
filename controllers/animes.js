@@ -9,12 +9,15 @@ const getAllAnimes = async (req, res) => {
       res.status(200).json(animes);
     });
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).json({ message: err.message });
   }
 };
 
 const getAnimeById = async (req, res) => {
   try {
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json('Must use a valid id to find the data!');
+    }
     const entryId = new ObjectId(req.params.id);
     const result = await mongodb
       .getDb()
@@ -26,7 +29,7 @@ const getAnimeById = async (req, res) => {
       res.status(200).json(animes[0]);
     });
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).json({ message: err.message });
   }
 };
 
@@ -43,12 +46,17 @@ const createAnime = async (req, res) => {
 
     const response = await mongodb.getDb().db('my_project').collection('animes').insertOne(anime);
     if (response.acknowledged) {
+      console.log('Created successfully');
+      res.setHeader('Content-Type', 'application/json');
       res.status(201).json(response);
     } else {
-      res.status(500).json(response.error || 'An error ocurred while creating new data.');
+      res
+        .status(500)
+        .json(response.error || 'An error occurred while creating the trip!');
     }
   } catch (err) {
-    res.status(500).json(err);
+    console.log(err);
+    res.status(500).json({ error: err });
   }
 };
 
