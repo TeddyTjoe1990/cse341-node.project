@@ -10,6 +10,4 @@ router.use('/', require('./swagger'));
 router.use('/anime', require('./animes'));
 router.use('/watchlist', require('./watchlists'));
 
-router.use('/user', require('./user'));
-
 module.exports = router;
