@@ -17,4 +17,4 @@ const isAuthenticated = (req, res, next) => {
   next();
 };
 
-module.exports = { config };
+module.exports = { config, isAuthenticated };
