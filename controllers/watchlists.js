@@ -15,6 +15,9 @@ const getAllWatchlists = async (req, res) => {
 
 const getWatchlistById = async (req, res) => {
   try {
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json('Must use a valid id to find the data!');
+    }
     const watchlistId = new ObjectId(req.params.id);
     const result = await mongodb.getDb().db('my_project').collection('watchlists').find({ _id: watchlistId });
     result.toArray().then((watchlists) => {
