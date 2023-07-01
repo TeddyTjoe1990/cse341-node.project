@@ -3,7 +3,7 @@ const router = express.Router();
 const watchlistsController = require('../controllers/watchlists');
 const validation = require('../midware/validate');
 const {requiresAuth} = require('express-openid-connect');
-const { isAuthenticated } = require('../midware/authenticate');
+const {isAuthenticated} = require('../midware/authenticate');
 
 router.get('/', watchlistsController.getAllWatchlists);
 
