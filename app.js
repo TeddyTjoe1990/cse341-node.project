@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongodb = require('./db/connect');
 const {requiresAuth} = require('express-openid-connect');
+const {isAuthenticated} = require('express-openid-connect')
 
 const app = express();
 const port = process.env.PORT || 10000;
@@ -12,9 +13,9 @@ app.use((req, res, next) => {
   next();
 });
 app.use('/', require('./routes'));
-app.get('/profile', requiresAuth(), (req, res) => {
-  res.send(JSON.stringify(req.oidc.user));
-});
+//app.get('/profile', requiresAuth(), isAuthenticated, (req, res) => {
+//  res.send(JSON.stringify(req.oidc.user));
+//});
 
 process.on('uncaughtException', (err, origin) => {
   console.log(
