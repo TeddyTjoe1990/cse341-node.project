@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongodb = require('./db/connect');
 const {requiresAuth} = require('express-openid-connect');
-const {isAuthenticated} = require('express-openid-connect')
+//const {isAuthenticated} = require('express-openid-connect');
 
 const app = express();
 const port = process.env.PORT || 10000;
